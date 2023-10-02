@@ -41,7 +41,7 @@ class PageFactory extends Factory
             ->generate();
 
         return $this->state(fn () => [
-            'content' => tiptap_converter()->asJSON($content)
+            'content' => tiptap_converter()->asJSON($content),
         ]);
     }
 }

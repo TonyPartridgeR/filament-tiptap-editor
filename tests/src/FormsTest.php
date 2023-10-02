@@ -2,22 +2,22 @@
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use FilamentTiptapEditor\Tests\Models\Page;
 use FilamentTiptapEditor\Tests\Fixtures\Livewire as LivewireFixture;
+use FilamentTiptapEditor\Tests\Models\Page;
 use FilamentTiptapEditor\Tests\Resources\PageResource\Pages\CreatePage;
 use FilamentTiptapEditor\Tests\Resources\PageResource\Pages\EditPage;
 use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Contracts\View\View;
 use Livewire\Livewire;
 
-it('has editor field', function() {
+it('has editor field', function () {
     Livewire::test(TestComponentWithForm::class)
-       ->assertFormFieldExists('html_content')
-       ->assertFormFieldExists('json_content')
-       ->assertFormFieldExists('text_content');
+        ->assertFormFieldExists('html_content')
+        ->assertFormFieldExists('json_content')
+        ->assertFormFieldExists('text_content');
 });
 
-it('has proper html', function() {
+it('has proper html', function () {
     $page = Page::factory()->make();
 
     Livewire::test(TestComponentWithForm::class)
@@ -29,7 +29,7 @@ it('has proper html', function() {
         ]);
 });
 
-it('creates proper data', function() {
+it('creates proper data', function () {
     $page = Page::factory()->make();
 
     Livewire::test(CreatePage::class)
@@ -48,7 +48,7 @@ it('creates proper data', function() {
     ]);
 });
 
-it('updates proper html', function() {
+it('updates proper html', function () {
     $page = Page::factory()->create();
     $newData = Page::factory()->make();
 

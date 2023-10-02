@@ -2,8 +2,8 @@
 
 namespace FilamentTiptapEditor\Tests\Resources\PageResource\Pages;
 
-use FilamentTiptapEditor\Tests\Resources\PageResource;
 use Filament\Resources\Pages\CreateRecord;
+use FilamentTiptapEditor\Tests\Resources\PageResource;
 
 class CreatePage extends CreateRecord
 {
