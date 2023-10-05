@@ -17,6 +17,7 @@ class FilamentTiptapEditorServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasAssets()
             ->hasTranslations()
+            ->hasRoute('web')
             ->hasViews();
     }
 

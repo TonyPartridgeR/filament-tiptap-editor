@@ -47,6 +47,7 @@ import {
     BubbleMenu,
     FloatingMenu,
     Video,
+    CustomBlock,
 } from "./extensions";
 import {lowlight} from "lowlight/lib/common";
 import {randomString, dispatch} from "./utils";
@@ -134,7 +135,7 @@ export default function tiptap({
                 return tool.id;
             })
 
-            let exts = [Document, Text, CustomParagraph, Dropcursor, Gapcursor, HardBreak, History, TextStyle];
+            let exts = [Document, Text, CustomParagraph, Dropcursor, Gapcursor, HardBreak, History, TextStyle, CustomBlock];
 
             if (tools.length) {
 
@@ -157,7 +158,8 @@ export default function tiptap({
                             isActive(state, 'oembed') ||
                             isActive(state, 'vimeo') ||
                             isActive(state, 'youtube') ||
-                            isActive(state, 'video')
+                            isActive(state, 'video') ||
+                            isActive(state, 'customBlock')
                         );
                     },
                 }))
